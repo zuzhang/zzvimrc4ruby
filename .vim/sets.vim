@@ -2,11 +2,13 @@
 syntax on
 
 set laststatus=2      " always show status
-set confirm           " confirm when quit unsaved file
 set number            " show line number
 set mouse=a           " use mouse anywhere
+set confirm           " confirm when quit unsaved file
+set noswapfile        " dont generate .swp file
 
 set ignorecase        " ignore case when search
+set smartcase         " word with >=1 uppercase => exact match
 set hlsearch          " highlight search
 set clipboard=unnamed " clip to system clipboard (register *)
 
@@ -21,6 +23,7 @@ set wrap              " wrap lines, we dont want long lines
 set list!             " show secret chars
 set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
 
+set tags+=tags;/      " find a tags file from current fold up to root
 set completeopt=longest,menu " auto complete options
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.png,*.jpg,*.gif,*.pdf,*.app,*.dmg,*.git,*.svn " ignore when use tab key
 
