@@ -1,29 +1,33 @@
 " Global Settings (plugin-independent)
 syntax on
 
-set laststatus=2      " always show status
-set number            " show line number
-set mouse=a           " use mouse anywhere
-set confirm           " confirm when quit unsaved file
-set noswapfile        " dont generate .swp file
-
-set ignorecase        " ignore case when search
-set smartcase         " word with >=1 uppercase => exact match
-set hlsearch          " highlight search
-set clipboard=unnamed " clip to system clipboard (register *)
-
+" edit
 " http://vim.wikia.com/wiki/Indenting_source_code
 set tabstop=4         " real tab width, used by smarttab setting
 set softtabstop=2     " (see expandtab)
 set expandtab         " convert tab to {softtabstop} amount spaces
 set shiftround        " round the indent to shiftwidth (when at 3 spaces, and I hit > go to 4, not 5)
 set shiftwidth=2      " indent amount when using >> <<
-set wrap              " wrap lines, we dont want long lines
 
+set mouse=a           " use mouse anywhere
+set confirm           " confirm when quit unsaved file
+set noswapfile        " dont generate .swp file
+
+" display
+set laststatus=2      " always show status
+set number            " show line number
+set wrap              " wrap lines, we dont want long lines
+set cul               " underline current line
 set list!             " show secret chars
 set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
 
-set tags+=tags;/      " find a tags file from current fold up to root
+" search
+set ignorecase        " ignore case when search
+set smartcase         " word with >=1 uppercase => exact match
+set hlsearch          " highlight search
+set clipboard=unnamed " clip to system clipboard (register *)
+
+set tags+=tags;/      " find a tags file from current folder up till root
 set completeopt=longest,menu " auto complete options
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.png,*.jpg,*.gif,*.pdf,*.app,*.dmg,*.git,*.svn " ignore when use tab key
 
