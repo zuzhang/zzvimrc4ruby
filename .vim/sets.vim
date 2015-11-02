@@ -1,5 +1,4 @@
 " Global Settings (plugin-independent)
-syntax on
 
 " edit
 " http://vim.wikia.com/wiki/Indenting_source_code
@@ -10,8 +9,15 @@ set shiftround        " round the indent to shiftwidth (when at 3 spaces, and I 
 set shiftwidth=2      " indent amount when using >> <<
 
 set mouse=a           " use mouse anywhere
+set clipboard=unnamed " clip to system clipboard (register *)
 set confirm           " confirm when quit unsaved file
 set noswapfile        " dont generate .swp file
+
+" colorscheme
+syntax on
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
 
 " display
 set laststatus=2      " always show status
@@ -25,11 +31,10 @@ set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
 set ignorecase        " ignore case when search
 set smartcase         " word with >=1 uppercase => exact match
 set hlsearch          " highlight search
-set clipboard=unnamed " clip to system clipboard (register *)
 
 set tags+=tags;/      " find a tags file from current folder up till root
 set completeopt=longest,menu " auto complete options
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.png,*.jpg,*.gif,*.pdf,*.app,*.dmg,*.git,*.svn " ignore when use tab key
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.png,*.jpg,*.gif,*.pdf,*.app,*.dmg,*.git,*.svn " search will ignore these file. used by plugins like ctrlp, command-t 
 
 " FileType related
 " may further move to .vim/ftplugin/{language}.vim

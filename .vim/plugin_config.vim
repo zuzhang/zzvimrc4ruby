@@ -6,7 +6,7 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1 " open buffers tab
 " preview on
 " https://github.com/bling/vim-airline/wiki/Screenshots
-let g:airline_theme = 'papercolor'
+let g:airline_theme = 'solarized'
 
 " Nerdtree & Tagbar
 map  <F3>       :NERDTreeToggle<CR>

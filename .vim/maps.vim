@@ -17,8 +17,11 @@ map <Leader>n :bn<CR>
 " map <Leader>w :bw<CR>
 map <Leader>d :b#<Bar>bd#<CR>
 
-" jump to tags(current word) and adjust position
+" jump to tags(current word) and adjust position. The other 3 are similar.
 map <C-]> <C-]>zz
+map <C-t> <C-t>zz
+map <C-o> <C-o>zz
+map <C-i> <C-i>zz
 
 " show modifications since last save
 map <Silent> <Leader>m :w !diff % -<CR>
