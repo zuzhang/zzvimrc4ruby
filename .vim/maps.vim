@@ -24,4 +24,7 @@ map <C-o> <C-o>zz
 map <C-i> <C-i>zz
 
 " show modifications since last save
-map <Silent> <Leader>m :w !diff % -<CR>
+map <silent> <Leader>m :w !diff % - <CR>
+
+" run current ruby file
+map <Leader>r :rubyfile ./%<CR>
