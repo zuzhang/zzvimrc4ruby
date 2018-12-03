@@ -18,8 +18,6 @@ Plugin 'jasoncodes/ctrlp-modified.vim' " find modified git-versioned file
 " Plugin 'Valloric/YouCompleteMe'        " auto complete
 Plugin 'junegunn/vim-easy-align'       " align
 Plugin 'scrooloose/syntastic'          " syntax check
-Plugin 'NLKNguyen/pipe.vim' "required
-Plugin 'NLKNguyen/pipe-mysql.vim'
 """"
 
 call vundle#end()            " required
